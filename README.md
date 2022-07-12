@@ -8,30 +8,36 @@
 
 ## Технологии
 
-    Python 3.7.9
+    asgiref==3.2.10
     requests==2.26.0
     django==2.2.16
     djangorestframework==3.12.4
     djangorestframework-simplejwt==4.7.2
+    gunicorn==20.0.4
+    psycopg2-binary==2.8.6
     PyJWT==2.1.0
-    pytest==6.2.4
-    pytest-django==4.4.0
-    pytest-pythonpath==0.7.3
     django-filter~=21.1
+    pytz==2020.1
+    sqlparse==0.3.1
 
-## Запуск проекта в dev-режиме
+## Шаблон наполнения env-файла лежит по адресу: 
 
-Установите зависимости из файла requirements.txt
+    infra/example.env
 
-    pip install -r requirements.txt
+## Запуск проекта:
 
-В папке с файлом manage.py выполните команду:
+для запуска проекта необходимо в папке infra выполнить:
 
-    python manage.py runserver
+     docker-compose up -d --build
+
+после чего будет собран и запущен контейнер, доступный по адресу:  
+
+    http://localhost/
+
 
 ## Документация с примерами запросов доступна по адресу:
 
-    http://127.0.0.1:8000/redoc/
+    http://localhost/redoc/
 
 ## Самостоятельная регистрация новых пользователей:
 
