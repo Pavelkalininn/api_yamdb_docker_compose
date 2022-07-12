@@ -26,9 +26,16 @@
 
 ## Запуск проекта:
 
-для запуска проекта необходимо в папке infra выполнить (загрузятся также данные из БД):
+для запуска проекта необходимо в папке infra выполнить:
 
      docker-compose up -d --build
+
+### Для применения миграций, создания суперюзера, загрузки статики и добавления в БД данных из фикстур соответственно:
+
+    docker-compose exec web python manage.py migrate
+    docker-compose exec web python manage.py createsuperuser
+    docker-compose exec web python manage.py collectstatic --no-input
+    docker-compose exec web python manage.py loaddata fixtures.json
 
 после чего будет собран и запущен контейнер, доступный по адресу:  
 
