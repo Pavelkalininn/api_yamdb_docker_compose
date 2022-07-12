@@ -10,5 +10,6 @@ COPY .. /app
 
 WORKDIR /app
 COPY entrypoint.sh /
+COPY fixtures.json /
 ENTRYPOINT ["/entrypoint.sh"]
 
