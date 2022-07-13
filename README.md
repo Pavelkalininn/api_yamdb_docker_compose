@@ -38,6 +38,7 @@
 
 [http://localhost/admin/](http://localhost/admin/)
 
+
 для остановки контейнера необходимо в папке infra выполнить:
 
      docker-compose down -v
