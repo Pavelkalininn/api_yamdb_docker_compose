@@ -22,24 +22,21 @@
 
 ## Шаблон наполнения env-файла лежит по адресу: 
 
-    infra/example.env
+[infra/example.env](./infra/example.env)
 
 ## Запуск проекта:
 
-для запуска проекта необходимо в папке infra выполнить:
-
-     docker-compose up -d --build
-
-### Для применения миграций, создания суперюзера, загрузки статики и добавления в БД данных из фикстур соответственно:
-
+### Для запуска проекта, применения миграций, создания суперюзера, загрузки статики и добавления в БД данных из фикстур соответственно необходимо в папке infra выполнить команды:
+    
+    docker-compose up -d --build
     docker-compose exec web python manage.py migrate
     docker-compose exec web python manage.py createsuperuser
     docker-compose exec web python manage.py collectstatic --no-input
     docker-compose exec web python manage.py loaddata fixtures.json
 
-после чего будет собран и запущен контейнер, доступный по адресу:  
+после чего будет собран и запущен контейнер, админка доступна по адресу:  
 
-    http://localhost/
+[http://localhost/admin/](http://localhost/admin/)
 
 для остановки контейнера необходимо в папке infra выполнить:
 
@@ -216,4 +213,4 @@
     
 
 
-Авторы __Паша Калинин__, __Марина Бузина__, __Виталий Осташов__
+Авторы: [__Паша Калинин__](https://github.com/Pavelkalininn), [__Марина Бузина__](https://github.com/Marina-ui), [__Виталий Осташов__](https://github.com/h0t0sh0)
